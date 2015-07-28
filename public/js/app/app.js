@@ -3,7 +3,7 @@
 *
 */
 
-var offeringsApp = angular.module('offeringsApp', ['ui.router','720kb.datepicker','angularFileUpload','angular-growl','ui.grid','ui.grid.resizeColumns', 'ui.grid.selection','ngFileUpload','ngDialog','ngUnderscore']);
+var offeringsApp = angular.module('offeringsApp', ['ui.router','angular-loading-bar','ui.grid.exporter','ui.grid.edit','720kb.datepicker','angularFileUpload','angular-growl','ui.grid','ui.grid.resizeColumns', 'ui.grid.selection','ngFileUpload','ngDialog','ngUnderscore']);
 
 offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider) {
 
@@ -30,6 +30,10 @@ offeringsApp.config(function($stateProvider, $urlRouterProvider,ngDialogProvider
         .state('home.admin.new', {
           url: '/new',
           templateUrl: '/templates/partial-vendors-add.html'
+        })
+        .state('home.admin.bulkvendors', {
+          url: '/bulk',
+          templateUrl: '/templates/partial-vendors-import.html'
         })
         .state('home.admin.items', {
           url: '/items',
